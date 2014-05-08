@@ -9,9 +9,15 @@ request('http://forecast.weather.gov/MapClick.php?lat=33.74899931200048&lon=-84.
             console.log($(this).text());
             console.log($(this).next().text());
         });
+
         console.log("\n--- META ---");
-        $('.current-conditions-detail li').each(function(){
-            console.log($(this).text());
+
+        $('.current-conditions-detail').children().each(function(){
+            var data = $(this).first().children();
+            console.log(data.text());
+            data.remove();
+            data = $(this);
+            console.log(data.text());
         });
     }
 });
