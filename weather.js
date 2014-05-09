@@ -14,10 +14,11 @@ request('http://forecast.weather.gov/MapClick.php?lat=33.74899931200048&lon=-84.
 
         $('.current-conditions-detail').children().each(function(){
             var data = $(this).first().children();
-            console.log(data.text());
+            var out = data.text();
             data.remove();
             data = $(this);
-            console.log(data.text());
+            out = out + ": " + data.text();
+            console.log(out);
         });
     }
 });
