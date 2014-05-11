@@ -1,0 +1,9 @@
+{
+  "name": "scrape",
+  "version": "0.0.0",
+  "author": "mlloreda",
+  "dependencies": {
+    "request": ">= 2.34.0",
+    "cheerio": ">= 0.16.0"
+    }
+}
