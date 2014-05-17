@@ -20,6 +20,17 @@ request('http://forecast.weather.gov/MapClick.php?lat=33.74899931200048&lon=-84.
             out = out + ": " + data.text();
             console.log(out);
         });
+
+        console.log("\n--- DAILY ---");
+
+        $('.point-forecast-icons').children().each(function(){
+            var data = $(this);
+            data.children().each(function() {
+                console.log($(this).text());
+            });
+
+            console.log("\n---\n");
+        });
     }
 });
 
